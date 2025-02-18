@@ -12,7 +12,7 @@ namespace LumelApp.Services
             _context = context;
         }
 
-        public async Task<long> GetTotalNoOfCutomersWithinDate(DateTime fromDate, DateTime toDate)
+        public async Task<long> GetTotalNoOfCustomersWithinDate(DateTime fromDate, DateTime toDate)
         {
             var orders = await (from o in _context.Orders
                                 where o.DateOfSale >= fromDate && o.DateOfSale <= toDate
